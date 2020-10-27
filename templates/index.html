@@ -6,6 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Alina Bui  |  Portfolio</title>
+        <script src="https://unpkg.com/scrollreveal@4"></script>
         <link rel="icon" type="image/x-icon" href="static/assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -53,7 +54,21 @@
             <section class="resume-section" id="portfolio">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Portfolio</h2>
-                    Portfolio content here
+                    <!--  utility class (explicit) -->
+
+                    <!-- style extension (implicit) --> 
+                    <ul class="widget-list">
+                        <li class="widget">1</li>
+                        <li class="widget">2</li>
+                        <li class="widget">3</li>
+                        <li class="widget">4</li>
+                        <li class="widget">5</li>
+                    </ul>
+
+                    <script>
+                        ScrollReveal().reveal('.headline', { duration: 2000 });
+                        ScrollReveal().reveal('.widget', { interval: 200 });
+                    </script> 
                 </div>
             </section>
             <hr class="m-0" />
