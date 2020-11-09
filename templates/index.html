@@ -38,12 +38,24 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Alina
-                        <span class="text-primary">Bui</span>
-                    </h1>
-                    <script src="bundle.js"></script>
-                    <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                   <h1 class="mb-0">
+                            Alina
+                            <span class="text-primary">Bui</span>
+                        </h1>
+                    <div id="typed-strings">
+                            <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                            <p>It <em>types</em> out sentences.</p>
+                          </div>
+                          <span id="typed"></span>
+                          
+                          <script>
+                            var typed = new Typed('#typed', {
+                              stringsElement: '#typed-strings'
+                            });
+                          </script>
+                    <br>
+                    <br>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/alinabui" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/alinaktbui" target="_blank"><i class="fab fa-github"></i></a>
@@ -59,17 +71,17 @@
                     <!--  utility class (explicit) -->
 
                     <!-- style extension (implicit) --> 
-                    <ul class="widget-list">
-                        <li class="widget">1</li>
-                        <li class="widget">2</li>
-                        <li class="widget">3</li>
-                        <li class="widget">4</li>
-                        <li class="widget">5</li>
-                    </ul>
+                    <div class="section group">
+                        <div class="col span_1_of_4"><img src="static/assets/img/project_image.png" class="img-project"></div>
+                        <div class="col span_1_of_4"><img src="static/assets/img/project_image.png" class="img-project"></div>                        
+                        <div class="col span_1_of_4"><img src="static/assets/img/project_image.png" class="img-project"></div>
+                         <!--<img src="static/assets/img/project_image.png" class="img-project">-->
+                        <!-- <img src="static/assets/img/project_image.png" class="img-project"> -->
+                    </div>
 
                     <script>
                         ScrollReveal().reveal('.headline', { duration: 2000 });
-                        ScrollReveal().reveal('.widget', { interval: 200 });
+                        ScrollReveal().reveal('.img-project', { interval: 200 });
                     </script> 
                 </div>
             </section>
@@ -78,7 +90,17 @@
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Let's get in touch</h2>
-                    Contact form here
+                    <form id="contactForm" onsubmit="return validate()" action="mailto:alinaktbui@gmail.com" method="post">
+              
+                            <input class="formInput" type="text" id="name" name="name" autocorrect="off" placeholder="Name"/>
+                            <input class="formInput" type="email" name="email" id="email" autocapitalize="off" autocorrect="off" placeholder="Email"/>
+                            <textarea class="formInput" name="message" id="message" placeholder="Message"></textarea>
+                           
+                           <br>
+                              <input class="submitForm" type="reset" value="Clear your message" />
+                              <input class="submitForm" type="submit" value="Send"/>
+                         
+                    </form>
                 </div>
             </section>
         </div>

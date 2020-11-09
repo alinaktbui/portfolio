@@ -205,6 +205,12 @@ img {
   border-style: none;
 }
 
+.img-project {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -10145,15 +10151,11 @@ html.sr .load-hidden {
 
 .widget-list {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  border-radius: 8px;
+  justify-content: space-between;
 }
 
 .widget {
-  width: 15%;
+  width: 100%;
   height: 50px;
   flex: auto;
   margin: 0.5rem;
@@ -10161,6 +10163,7 @@ html.sr .load-hidden {
   line-height: 50px;
   text-align: center;
   border-radius: 4px;
+  justify-content: space-between;
 }
 
 /* extension */
@@ -10168,3 +10171,96 @@ html.sr .widget {
   visibility: hidden;
 }
 
+*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+
+
+
+
+/*  Contact Form */
+#contactForm {
+  margin: 0 auto;
+}
+
+#contactForm input, textarea {
+  letter-spacing: 2px;
+  font: 200 1em/1.1em 'Helvetica Neue', sans-serif;
+  
+  color: #000;
+  background-color: RGBA(204, 204, 204, .1);
+
+  outline: none; border: none;
+
+  display:block;
+  margin: 0 auto;
+  padding: 1em;
+  width: 90%;
+  max-width: 400px;
+}
+
+#contactForm textarea {
+height: 150px;
+}
+
+#contactForm *:focus {
+background-color: #81D8D0;
+}
+
+#contactForm *:hover {
+background-color: #81D8D0;
+}
+
+::-webkit-input-placeholder {
+  color: #777;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #777; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color: #777; 
+}
+
+:-ms-input-placeholder {  
+   color: #777;
+}
